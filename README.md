@@ -74,6 +74,8 @@
     docker load </tmp/nginx.tar.gz
 ### 运行一个容器
      docker run -it alpine sh   #运行并进入alpine  -d后台运行
+### 进入容器
+        docker exec -it ID bash #-d：分离模式，即在后台运行命令   -i：交互模式  -t：分配一个 tty  -u：指定用户和用户组，格式：<name|uid>[:<group|gid>]
 ### 查看容器
     docker ps       #查看删除容器
     docker ps -a    #查看所有容器包括未运行的
