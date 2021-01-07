@@ -5,17 +5,17 @@
 ## docker的架构
 ![imges](https://github.com/cuiziwenn/imgesfile/blob/master/docker%E6%9E%B6%E6%9E%84.jpg)
 
-** distribution 负责与docker registry交互，上传洗澡镜像以及v2 registry 有关的源数据
+* distribution 负责与docker registry交互，上传洗澡镜像以及v2 registry 有关的源数据
 
-** registry负责docker registry有关的身份认证、镜像查找、镜像验证以及管理registry mirror等交互操作
+* registry负责docker registry有关的身份认证、镜像查找、镜像验证以及管理registry mirror等交互操作
 
-** image 负责与镜像源数据有关的存储、查找，镜像层的索引、查找以及镜像tar包有关的导入、导出操作
+* image 负责与镜像源数据有关的存储、查找，镜像层的索引、查找以及镜像tar包有关的导入、导出操作
 
-** reference负责存储本地所有镜像的repository和tag名，并维护与镜像id之间的映射关系
+* reference负责存储本地所有镜像的repository和tag名，并维护与镜像id之间的映射关系
 
-** layer模块负责与镜像层和容器层源数据有关的增删改查，并负责将镜像层的增删改查映射到实际存储镜像层文件的graphdriver模块
+* layer模块负责与镜像层和容器层源数据有关的增删改查，并负责将镜像层的增删改查映射到实际存储镜像层文件的graphdriver模块
 
-** graghdriver是所有与容器镜像相关操作的执行者
+* graghdriver是所有与容器镜像相关操作的执行者
 
 ## docker 的优势
 * 灵活：即使是最复杂的应用也可以集装箱化。
